@@ -40,7 +40,7 @@ export default function Included() {
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/cleaning-supplies.jpg"
+                src="/whats-included.jpg"
                 alt="Professional cleaning equipment and supplies"
                 fill
                 className="object-cover"
@@ -75,26 +75,7 @@ export default function Included() {
               </div>
             </div>
 
-            {/* Additional information */}
-            <div className="bg-white rounded-xl p-6 shadow-md">
-              <h4 className="font-bold text-slate-800 mb-4">Professional Equipment</h4>
-              <p className="text-gray-600 text-sm mb-4">
-                Our team brings all professional cleaning equipment and products.
-                You don't need to worry about anything - just relax and enjoy the results.
-              </p>
-              
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded text-xs font-medium">
-                  HEPA Vacuums
-                </span>
-                <span className="bg-cyan-100 text-cyan-600 px-3 py-1 rounded text-xs font-medium">
-                  Microfiber Cloths
-                </span>
-                <span className="bg-green-100 text-green-600 px-3 py-1 rounded text-xs font-medium">
-                  Eco Products
-                </span>
-              </div>
-            </div>
+      
 
             {/* CTA */}
             <a 
