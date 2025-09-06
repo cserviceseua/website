@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Phone } from 'lucide-react';
 
 export default function Testimonials() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -12,21 +12,21 @@ export default function Testimonials() {
       name: 'Sarah Johnson',
       location: 'Satisfied Customer',
       rating: 5,
-      text: 'C & R Cleaning Services transformed my home! Their attention to detail is incredible, and the team is always professional and trustworthy. I wouldn\'t use anyone else.',
+      text: 'C & R Cleaning transformed my home! Their attention to detail is incredible, and the team is always professional and reliable. I wouldn\'t use any other company.',
       avatar: '/avatar-1.jpg'
     },
     {
-      name: 'Mike Rodriguez',
+      name: 'Michael Rodriguez',
       location: 'Happy Client',
       rating: 5,
-      text: 'Amazing service! They cleaned my apartment before I moved in, and it was spotless. The booking process was so easy, and they showed up exactly on time.',
+      text: 'Amazing service! They cleaned my apartment before I moved in, and it was spotless. The scheduling process was very easy, and they arrived exactly on time.',
       avatar: '/avatar-2.jpg'
     },
     {
       name: 'Emily Chen',
       location: 'Regular Customer',
       rating: 5,
-      text: 'I\'ve been using C & R Cleaning Services for monthly cleaning for over a year. Consistent quality, fair pricing, and they bring all their own supplies. Highly recommend!',
+      text: 'I\'ve been using C & R Cleaning for monthly cleaning for over a year. Consistent quality, fair prices, and they bring all the supplies. Highly recommend!',
       avatar: '/avatar-3.jpg'
     }
   ];
@@ -44,30 +44,29 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-20 md:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
-              TESTIMONIALS
+            <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium uppercase tracking-wide shadow-md">
+              Testimonials
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-ink mb-4 tracking-tight">
-            Professional Quality{' '}
-            <span className="text-primary block">Cleaning With Experts</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gradient-blue">
+            What Our Clients Say
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
-            We value each client, providing cleaning services with attention to detail and complete trust.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Our clients' satisfaction is our highest priority. See some testimonials from those who already trust our work.
           </p>
         </div>
 
         {/* Testimonial slider */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 relative">
+          <div className="bg-white rounded-xl shadow-xl p-8 lg:p-12 relative">
             {/* Navigation buttons */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white text-primary rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 focus:outline-none shadow-md"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={20} />
@@ -75,42 +74,42 @@ export default function Testimonials() {
 
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white text-primary rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 focus:outline-none shadow-md"
               aria-label="Next testimonial"
             >
               <ChevronRight size={20} />
             </button>
 
             {/* Testimonial content */}
-            <div className="text-center px-12">
+            <div className="text-center px-4 lg:px-16">
               {/* Stars */}
-              <div className="flex justify-center gap-1 mb-6">
+              <div className="flex justify-center gap-2 mb-8">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="text-yellow-400 fill-current" size={24} />
+                  <Star key={i} className="text-amber-400 fill-current drop-shadow-sm" size={28} />
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="text-lg md:text-xl text-ink leading-relaxed mb-8 font-medium">
+              <blockquote className="text-xl md:text-2xl text-slate-800 leading-relaxed mb-10 font-medium italic">
                 "{testimonials[currentTestimonial].text}"
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center justify-center gap-4">
-                <div className="w-16 h-16 relative rounded-full overflow-hidden bg-gray-100">
+              <div className="flex items-center justify-center gap-6">
+                <div className="w-20 h-20 relative rounded-full overflow-hidden bg-gray-100 ring-4 ring-cyan-400/20 shadow-lg">
                   <Image
                     src={testimonials[currentTestimonial].avatar}
                     alt={testimonials[currentTestimonial].name}
                     fill
                     className="object-cover"
-                    sizes="64px"
+                    sizes="80px"
                   />
                 </div>
                 <div className="text-left">
-                  <div className="font-bold text-ink">
+                  <div className="font-bold text-slate-800 text-lg">
                     {testimonials[currentTestimonial].name}
                   </div>
-                  <div className="text-muted text-sm">
+                  <div className="text-gray-600 text-sm font-medium">
                     {testimonials[currentTestimonial].location}
                   </div>
                 </div>
@@ -119,14 +118,14 @@ export default function Testimonials() {
           </div>
 
           {/* Dots navigation */}
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="flex justify-center gap-4 mt-10">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                className={`w-4 h-4 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none ${
                   index === currentTestimonial 
-                    ? 'bg-primary' 
+                    ? 'bg-blue-600 shadow-lg shadow-blue-600/30' 
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
@@ -136,18 +135,28 @@ export default function Testimonials() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-ink mb-4">
-            We always seek the best result for the client
-          </h3>
-          <a 
-            href="tel:(267)407-1751"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:shadow-lg"
-          >
-            Call Now
-          </a>
-          <p className="mt-4 text-sm text-muted">CALL US ANYTIME</p>
-          <p className="text-xl font-bold text-ink">(267) 407-1751</p>
+        <div className="text-center mt-20 bg-white rounded-xl p-8 lg:p-12 shadow-lg">
+          <div className="space-y-6">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-800">
+              We always strive for the best results for our clients
+            </h3>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Contact us and discover why we are the #1 choice for professional cleaning!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <a 
+                href="tel:(267)407-1751"
+                className="inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg"
+              >
+                <Phone size={20} />
+                Call Now
+              </a>
+              <div className="text-center sm:text-left">
+                <p className="text-sm text-gray-600 font-medium">Call anytime</p>
+                <p className="text-2xl font-bold text-blue-600">(267) 407-1751</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

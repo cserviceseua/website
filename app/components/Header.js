@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, MapPin, Clock, Shield } from "lucide-react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,7 +9,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,131 +27,166 @@ export default function Header() {
   return (
     <>
       {/* Top strip */}
-      <div className="fixed w-full z-10 bg-primary text-white py-2 text-center text-sm">
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span className="hidden md:inline">Open: 7AM - 5PM (Monday - Saturday)</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Phone size={16} />
-            <span>(267) 407-1751</span>
+      <div className="fixed w-full z-50 bg-slate-800 text-white py-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="hidden md:flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <Clock size={14} className="text-blue-400" />
+                <span className="text-sm">Mon - Sat, 8AM - 6PM</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin size={14} className="text-blue-400" />
+                <span className="text-sm">Serving your area</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 font-semibold">
+              <Phone size={14} className="text-blue-400" />
+              <span className="text-sm">(267) 407-1751</span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main header */}
       <header
-        className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
+        className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
+          isScrolled 
+            ? "bg-white shadow-lg" 
+            : "bg-white/90 backdrop-blur-md"
         }`}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="text-white"
-                >
-                  <path
-                    d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"
-                    fill="currentColor"
-                  />
-                </svg>
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-600/30">
+                <div className="w-7 h-7 bg-white rounded-sm flex items-center justify-center">
+                  <div className="w-4 h-4 bg-cyan-400 rounded-full"></div>
+                </div>
               </div>
-              <span className="text-xl font-bold text-ink">C & R Cleaning</span>
+              <div>
+                <span className="text-xl font-bold text-blue-600">C & R Cleaning</span>
+                <span className="block text-xs text-gray-500 -mt-1">Professional Services</span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
-              <button
-                onClick={() => scrollToSection("how-to-book")}
-                className="text-ink cursor-pointer hover:text-primary transition-colors focus:outline-none focus:text-primary"
-              >
-                How to Book
-              </button>
+            <nav className="hidden lg:flex items-center gap-8">
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-ink cursor-pointer hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className="text-gray-600 font-medium hover:text-blue-600 transition-all duration-200 relative group py-2"
               >
                 Services
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              </button>
+              <button
+                onClick={() => scrollToSection("how-to-book")}
+                className="text-gray-600 font-medium hover:text-blue-600 transition-all duration-200 relative group py-2"
+              >
+                How It Works
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              </button>
+              <button
+                onClick={() => scrollToSection("gallery")}
+                className="text-gray-600 font-medium hover:text-blue-600 transition-all duration-200 relative group py-2"
+              >
+                Gallery
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="text-ink cursor-pointer hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className="text-gray-600 font-medium hover:text-blue-600 transition-all duration-200 relative group py-2"
               >
                 Testimonials
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-ink cursor-pointer hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className="text-gray-600 font-medium hover:text-blue-600 transition-all duration-200 relative group py-2"
               >
                 Contact
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
             </nav>
 
-            {/* CTA Button */}
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            >
-              Get Quote
-            </button>
+            <div className="flex items-center gap-4">
+             
+              
+              {/* CTA Button */}
+              <a
+                href="tel:(267)407-1751"
+                className="hidden md:inline-flex items-center gap-2 bg-cyan-400 hover:bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-md"
+              >
+                <Phone size={18} />
+                Request Quote
+              </a>
 
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-ink hover:text-primary focus:outline-none focus:text-primary"
-              aria-label="Toggle mobile menu"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+              {/* Mobile menu button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 rounded-lg text-blue-600 hover:bg-blue-50 focus:outline-none transition-all duration-200"
+                aria-label="Toggle mobile menu"
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t shadow-lg">
-            <nav className="container mx-auto px-4 py-4 space-y-4">
+          <div className="lg:hidden bg-white shadow-lg border-t border-gray-100">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-4">
               <button
                 onClick={() => scrollToSection("services")}
-                className="block text-ink hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className="block w-full text-left text-gray-600 font-medium hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors py-3 px-4"
               >
-                Serviços
+                Services
               </button>
               <button
                 onClick={() => scrollToSection("how-to-book")}
-                className="block text-ink hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className="block w-full text-left text-gray-600 font-medium hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors py-3 px-4"
               >
-                Como funciona
+                How It Works
+              </button>
+              <button
+                onClick={() => scrollToSection("gallery")}
+                className="block w-full text-left text-gray-600 font-medium hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors py-3 px-4"
+              >
+                Gallery
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="block text-ink hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className="block w-full text-left text-gray-600 font-medium hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors py-3 px-4"
               >
-                Depoimentos
+                Testimonials
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block text-ink hover:text-primary transition-colors focus:outline-none focus:text-primary"
+                className="block w-full text-left text-gray-600 font-medium hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors py-3 px-4"
               >
-                Contato
+                Contact
               </button>
 
-              <button
-                onClick={() => scrollToSection("hero")}
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 w-full justify-center"
+              {/* Divider */}
+              <div className="border-t border-gray-200 my-4"></div>
+              
+             
+              <a
+                href="tel:(267)407-1751"
+                className="inline-flex items-center justify-center gap-2 bg-cyan-400 hover:bg-cyan-500 text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-md w-full"
               >
-                Obter cotação
-              </button>
+                <Phone size={18} />
+                Request Quote
+              </a>
             </nav>
           </div>
         )}
       </header>
+      
+      {/* Spacing to compensate for fixed header */}
+      <div className="h-28"></div>
     </>
   );
 }

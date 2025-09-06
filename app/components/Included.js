@@ -5,38 +5,43 @@ import { Check, ArrowRight } from 'lucide-react';
 
 export default function Included() {
   const features = [
-    'Pro-grade supplies included',
-    'Insured & bonded team',
-    'Dust all surfaces thoroughly',
-    'Vacuum carpets and rugs',
-    'Mop hard floors',
-    'Sanitize kitchens & bathrooms',
-    'Eco-friendly options available',
-    'Flexible add-ons (fridge, oven, windows)',
-    'No hidden fees ever',
-    'Same-day booking available'
+    'Professional products included',
+    'Insured and licensed team',
+    'Complete cleaning of all surfaces',
+    'Carpet and rug vacuuming',
+    'Floor cleaning and waxing',
+    'Kitchen and bathroom sanitization',
+    'Eco-friendly product options',
+    'Extra services (refrigerator, oven, windows)',
+    'No hidden fees',
+    'Same-day scheduling'
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-bg">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-ink mb-4 tracking-tight">
-            What's Included?
+          <div className="inline-block mb-4">
+            <span className="bg-cyan-400 text-white px-4 py-2 rounded-full text-sm font-medium uppercase tracking-wide shadow-md">
+              What's Included
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gradient-blue">
+            Complete Service
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
-            Cada limpeza inclui tudo que você precisa para uma casa impecável. 
-            Sem surpresas, sem taxas ocultas.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Each cleaning includes everything you need for an impeccable home.
+            No surprises, no hidden fees.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Image */}
           <div className="relative">
-            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-100 shadow-lg">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
               <Image
                 src="/cleaning-supplies.jpg"
-                alt="Professional cleaning supplies and equipment"
+                alt="Professional cleaning equipment and supplies"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -44,58 +49,61 @@ export default function Included() {
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-lg">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">100%</div>
-                <div className="text-sm text-muted">Eco-Friendly</div>
-                <div className="text-sm text-muted">Options</div>
+                <div className="text-xl font-bold text-green-500 mb-2">100%</div>
+                <div className="text-xs text-gray-600">Eco</div>
+                <div className="text-xs text-gray-600">Products</div>
               </div>
             </div>
           </div>
 
           {/* Right column - Features */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-bold text-ink mb-6">Key Features</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Included Items</h3>
               
-              <div className="grid gap-4">
+              <div className="grid gap-3">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="text-white" size={16} />
+                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="text-white" size={12} />
                     </div>
-                    <span className="text-ink leading-relaxed">{feature}</span>
+                    <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Additional info */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-100">
-              <h4 className="font-bold text-ink mb-3">Professional Equipment Included</h4>
-              <p className="text-muted text-sm mb-4">
-                Nossa equipe traz todos os equipamentos e produtos de limpeza profissionais. 
-                Você não precisa se preocupar com nada - apenas relaxe e desfrute do resultado.
+            {/* Additional information */}
+            <div className="bg-white rounded-xl p-6 shadow-md">
+              <h4 className="font-bold text-slate-800 mb-4">Professional Equipment</h4>
+              <p className="text-gray-600 text-sm mb-4">
+                Our team brings all professional cleaning equipment and products.
+                You don't need to worry about anything - just relax and enjoy the results.
               </p>
               
               <div className="flex flex-wrap gap-2">
-                <span className="bg-accent/50 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded text-xs font-medium">
                   HEPA Vacuums
                 </span>
-                <span className="bg-accent/50 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-cyan-100 text-cyan-600 px-3 py-1 rounded text-xs font-medium">
                   Microfiber Cloths
                 </span>
-                <span className="bg-accent/50 text-primary px-3 py-1 rounded-full text-sm font-medium">
-                  Eco Cleaners
+                <span className="bg-green-100 text-green-600 px-3 py-1 rounded text-xs font-medium">
+                  Eco Products
                 </span>
               </div>
             </div>
 
             {/* CTA */}
-            <button className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-              View the Full List
-              <ArrowRight size={20} />
-            </button>
+            <a 
+              href="tel:(267)407-1751"
+              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
+            >
+              Request Quote
+              <ArrowRight size={18} />
+            </a>
           </div>
         </div>
       </div>

@@ -6,67 +6,70 @@ export default function WhyChoose() {
   const reasons = [
     {
       icon: Clock,
-      title: 'Saves Your Time',
-      description: 'Save time by booking online today.',
-      color: 'bg-primary/10 text-primary'
+      title: 'Time Saving',
+      description: 'You gain time to do what you love most.',
+      color: 'bg-blue-100 text-blue-600'
     },
     {
       icon: CheckCircle,
-      title: 'Only Best Quality',
-      description: 'We have many reviews!',
-      color: 'bg-primary/10 text-primary'
+      title: 'Guaranteed Quality',
+      description: 'Exceptional results in every service.',
+      color: 'bg-cyan-100 text-cyan-600'
     },
     {
       icon: Shield,
-      title: 'Safety First',
-      description: 'We are properly insured and bonded.',
-      color: 'bg-primary/10 text-primary'
+      title: 'Total Security',
+      description: 'Licensed, insured, and reliable company.',
+      color: 'bg-green-100 text-green-600'
     },
     {
       icon: Users,
-      title: 'We Arrived on Time',
-      description: 'We arrived on time to start the service.',
-      color: 'bg-primary/10 text-primary'
+      title: 'Punctual Team',
+      description: 'We always arrive at the scheduled time.',
+      color: 'bg-amber-100 text-amber-600'
     }
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
-              C & R CLEANING SERVICES
+            <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium uppercase tracking-wide shadow-md">
+              Why Choose Us
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-ink mb-4 tracking-tight">
-            Why choose us?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gradient-blue">
+            Our Advantages
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            We are more than a cleaning company. We offer peace of mind,
+            quality, and trust in every service we perform.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {reasons.map((reason, index) => {
             const IconComponent = reason.icon;
             
             return (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-gray-100">
                 {/* Icon */}
-                <div className={`w-16 h-16 ${reason.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent size={32} />
+                <div className={`w-14 h-14 ${reason.color} rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  <IconComponent size={24} />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-ink mb-3">
+                <h3 className="text-lg font-bold text-slate-800 mb-2">
                   {reason.title}
                 </h3>
-                <p className="text-muted">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {reason.description}
                 </p>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
