@@ -48,13 +48,6 @@ export default function Hero() {
           
             {/* Call to Action */}
             <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <a 
-                href="tel:(267)407-1751"
-                className="inline-flex items-center justify-center gap-2 bg-cyan-400 hover:bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg shadow-cyan-400/30 group"
-              >
-                <Phone size={20} className="group-hover:animate-pulse" />
-                <span>Request Quote</span>
-              </a>
              
             </div>
           </div>

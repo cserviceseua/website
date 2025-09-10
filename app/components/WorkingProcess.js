@@ -82,18 +82,7 @@ export default function WorkingProcess() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <a 
-            href="tel:(267)407-1751"
-            className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
-          >
-            <Phone size={20} />
-            Get Started Now
-          </a>
-          <p className="text-sm text-gray-600 mt-4">
-            Call now and receive your free quote
-          </p>
-        </div>
+       
       </div>
     </section>
   );

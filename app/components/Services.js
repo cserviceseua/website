@@ -188,16 +188,10 @@ export default function Services() {
             </div>
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-blue-600 font-bold">From $150</span>
                 <span className="bg-cyan-100 text-cyan-600 text-xs px-3 py-1 rounded-full">Popular</span>
               </div>
               <p className="text-gray-600 text-sm mb-4">Intensive treatment to remove accumulated dirt, germs, and allergens from every corner of your home.</p>
-              <a 
-                href="tel:(267)407-1751"
-                className="inline-flex items-center justify-center w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-sm"
-              >
-                Schedule Service
-              </a>
+             
             </div>
           </div>
           
@@ -218,16 +212,10 @@ export default function Services() {
             </div>
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-blue-600 font-bold">From $200</span>
                 <span className="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full">Specialized</span>
               </div>
               <p className="text-gray-600 text-sm mb-4">Specialized cleaning to remove construction dust, paint residue, silicone, and other materials after renovations.</p>
-              <a 
-                href="tel:(267)407-1751"
-                className="inline-flex items-center justify-center w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-sm"
-              >
-                Schedule Service
-              </a>
+             
             </div>
           </div>
           
@@ -248,16 +236,10 @@ export default function Services() {
             </div>
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-blue-600 font-bold">From $180</span>
                 <span className="bg-amber-100 text-amber-600 text-xs px-3 py-1 rounded-full">Complete</span>
               </div>
               <p className="text-gray-600 text-sm mb-4">Complete cleaning service for those who are moving, ensuring the property is in perfect condition.</p>
-              <a 
-                href="tel:(267)407-1751"
-                className="inline-flex items-center justify-center w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-sm"
-              >
-                Schedule Service
-              </a>
+             
             </div>
           </div>
         </div>
@@ -281,14 +263,10 @@ export default function Services() {
               </p>
             </div>
             
-            <div className="flex flex-col-reverse  gap-6 items-center">
-              <a 
-                href="tel:(267)407-1751"
-                className="inline-flex items-center justify-center gap-2 bg-cyan-400 hover:bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg shadow-cyan-400/30 group"
-              >
-                <Phone size={20} className="group-hover:animate-pulse" />
-                <span>Call Now</span>
-              </a>
+            <div className="flex flex-col-reverse  gap-2 items-center">
+            <p className="text-sm text-gray-600 font-medium">
+              ...preference text message
+            </p>
               <div className="text-center sm:text-left">
                 <p className="text-sm text-gray-600 font-medium">Contact us</p>
                 <p className="text-2xl font-bold text-blue-600">(267) 407-1751</p>

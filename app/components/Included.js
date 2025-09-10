@@ -78,13 +78,7 @@ export default function Included() {
       
 
             {/* CTA */}
-            <a 
-              href="tel:(267)407-1751"
-              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
-            >
-              Request Quote
-              <ArrowRight size={18} />
-            </a>
+           
           </div>
         </div>
       </div>

@@ -13,21 +13,21 @@ export default function Testimonials() {
       location: 'Satisfied Customer',
       rating: 5,
       text: 'C & R Cleaning transformed my home! Their attention to detail is incredible, and the team is always professional and reliable. I wouldn\'t use any other company.',
-      avatar: '/avatar-1.jpg'
+      avatar: '/avatar-2.png'
     },
     {
       name: 'Michael Rodriguez',
       location: 'Happy Client',
       rating: 5,
       text: 'Amazing service! They cleaned my apartment before I moved in, and it was spotless. The scheduling process was very easy, and they arrived exactly on time.',
-      avatar: '/avatar-2.jpg'
+      avatar: '/avatar-1.png'
     },
     {
       name: 'Emily Chen',
       location: 'Regular Customer',
       rating: 5,
       text: 'I\'ve been using C & R Cleaning for monthly cleaning for over a year. Consistent quality, fair prices, and they bring all the supplies. Highly recommend!',
-      avatar: '/avatar-3.jpg'
+      avatar: '/avatar-2.png'
     }
   ];
 
@@ -144,16 +144,11 @@ export default function Testimonials() {
               Contact us and discover why we are the #1 choice for professional cleaning!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a 
-                href="tel:(267)407-1751"
-                className="inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg"
-              >
-                <Phone size={20} />
-                Call Now
-              </a>
+              
               <div className="text-center sm:text-left">
                 <p className="text-sm text-gray-600 font-medium">Call anytime</p>
                 <p className="text-2xl font-bold text-blue-600">(267) 407-1751</p>
+                <p className="text-sm text-gray-600 font-medium">Preference text message</p>
               </div>
             </div>
           </div>

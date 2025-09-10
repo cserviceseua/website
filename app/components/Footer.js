@@ -152,15 +152,14 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-5">
-              <a 
-                href="tel:(267)407-1751" 
+              <div 
                 className="flex items-center gap-3 text-white/80 hover:text-cyan-400 transition-colors duration-200 group"
               >
-                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-cyan-400/20 transition-all duration-200">
+                <div className="w-10 h-10 bg-white/10 flex-shrink-0 rounded-full flex items-center justify-center group-hover:bg-cyan-400/20 transition-all duration-200">
                   <Phone size={18} className="group-hover:text-cyan-400" />
                 </div>
-                <span>(267) 407-1751</span>
-              </a>
+                <span className='whitespace-preline'>(267) 407-1751 {"\n"}(preference text message)</span>
+              </div>
               <a 
                 href="mailto:crcleaningservices@gmail.com" 
                 className="flex items-center gap-3 text-white/80 hover:text-cyan-400 transition-colors duration-200 group"
@@ -177,23 +176,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer gallery */}
-        <div className="mt-16">
-          <h4 className="text-lg font-bold mb-6 text-center">Our Work</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-            {['/gallery-1.jpg', '/gallery-2.jpg', '/gallery-3.jpg', '/gallery-4.jpg', '/service-deep.jpg', '/service-recurring.jpg'].map((src, index) => (
-              <div key={index} className="relative h-24 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300 shadow-lg">
-                <Image 
-                  src={src}
-                  alt="Cleaning Work" 
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-slate-800/40 hover:bg-slate-800/10 transition-all duration-300"></div>
-              </div>
-            ))}
-          </div>
-        </div>
+       
       </div>
 
       {/* Bottom bar */}

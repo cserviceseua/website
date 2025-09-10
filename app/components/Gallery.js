@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { Eye, ArrowRight, ArrowLeft, ExternalLink, Sparkles, Check, Search, Maximize } from 'lucide-react';
+import { Eye, ArrowRight, ArrowLeft, ExternalLink, Sparkles, Check, Search } from 'lucide-react';
 
 // Component for each before/after card with slider comparison
 function BeforeAfterSlider({ imageSet, index }) {
@@ -161,7 +161,7 @@ function FullScreenModal({ isOpen, onClose, images, initialIndex = 0 }) {
   };
   
   return (
-    <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center backdrop-blur-lg">
+    <div className="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center backdrop-blur-lg">
       {/* Close button */}
       <button 
         className="absolute top-6 right-6 text-white z-20 p-2 bg-black/50 rounded-full hover:bg-black/80 transition-colors"
@@ -228,8 +228,7 @@ function FullScreenModal({ isOpen, onClose, images, initialIndex = 0 }) {
 
 export default function Gallery() {
   const [activeTab, setActiveTab] = useState('before-after');
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  // Removed modal state as we're not using it anymore
   
   const beforeAfterImages = [
     {
@@ -259,21 +258,21 @@ export default function Gallery() {
   ];
   
   const galleryImages = [
-    { image: '/gallery-1.jpg', description: 'Living Room Cleaning', category: 'residential' },
-    { image: '/gallery-2.jpg', description: 'Impeccable Kitchen', category: 'residential' },
-    { image: '/gallery-3.jpg', description: 'Sanitized Bathroom', category: 'residential' },
-    { image: '/gallery-4.jpg', description: 'Organized Bedroom', category: 'residential' },
-    { image: '/service-deep.jpg', description: 'Deep Cleaning', category: 'specialized' },
-    { image: '/service-movein.jpg', description: 'Move-in Cleaning', category: 'specialized' },
-    { image: '/service-recurring.jpg', description: 'Recurring Cleaning', category: 'commercial' },
-    { image: '/service-specialized.jpg', description: 'Specialized Service', category: 'commercial' },
-    { image: '/cleaning-supplies.jpg', description: 'Professional Products', category: 'specialized' },
+    { image: '/all-work/work (1).webp', description: 'Living Room Cleaning', category: 'residential' },
+    { image: '/all-work/work (2).webp', description: 'Impeccable Kitchen', category: 'residential' },
+    { image: '/all-work/work (3).webp', description: 'Sanitized Bathroom', category: 'residential' },
+    { image: '/all-work/work (4).webp', description: 'Organized Bedroom', category: 'residential' },
+    { image: '/all-work/work (5).webp', description: 'Deep Cleaning', category: 'specialized' },
+    { image: '/all-work/work (6).webp', description: 'Move-in Cleaning', category: 'specialized' },
+    { image: '/all-work/work (7).webp', description: 'Recurring Cleaning', category: 'commercial' },
+    { image: '/all-work/work (8).webp', description: 'Specialized Service', category: 'commercial' },
+    { image: '/all-work/work (9).webp', description: 'Professional Products', category: 'specialized' },
+    { image: '/all-work/work (10).webp', description: 'Recurring Cleaning', category: 'commercial' },
+    { image: '/all-work/work (11).webp', description: 'Specialized Service', category: 'commercial' },
+    { image: '/all-work/work (12).webp', description: 'Professional Products', category: 'specialized' },
   ];
   
-  const openModal = (index) => {
-    setSelectedImageIndex(index);
-    setModalOpen(true);
-  };
+  // Removed openModal function as we're not using modals anymore
   
   return (
     <section id="gallery" className="py-20 md:py-28 bg-white relative overflow-hidden">
@@ -364,7 +363,7 @@ export default function Gallery() {
                 <div 
                   key={index} 
                   className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-                  onClick={() => openModal(index)}
+                  // Removed click handler to prevent opening modal
                 >
                   <div className="aspect-[3/2] relative">
                     <Image
@@ -375,13 +374,10 @@ export default function Gallery() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                      <h3 className="text-white font-bold">{img.description}</h3>
-                      <div className="flex items-center gap-2 mt-2">
-                        <div className="p-2 bg-white/20 rounded-full backdrop-blur-sm">
-                          <Maximize size={16} className="text-white" />
-                        </div>
-                        <span className="text-white/90 text-sm">Click to enlarge</span>
-                      </div>
+                      {/* <h3 className="text-white font-bold">{img.description}</h3>
+                      <div className="mt-2">
+                        <span className="text-white/90 text-sm">{img.category}</span>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -409,14 +405,6 @@ export default function Gallery() {
             <div className="text-gray-600 text-sm font-medium">Response</div>
           </div>
         </div>
-        
-        {/* Fullscreen image modal */}
-        <FullScreenModal
-          isOpen={modalOpen}
-          onClose={() => setModalOpen(false)}
-          images={galleryImages}
-          initialIndex={selectedImageIndex}
-        />
       </div>
     </section>
   );

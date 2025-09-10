@@ -50,7 +50,7 @@ export default function Header() {
 
       {/* Main header */}
       <header
-        className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-8 left-0 right-0 z-[40] transition-all duration-300 ${
           isScrolled 
             ? "bg-white shadow-lg" 
             : "bg-white/90 backdrop-blur-md"
@@ -114,13 +114,13 @@ export default function Header() {
              
               
               {/* CTA Button */}
-              <a
+              <div
                 href="tel:(267)407-1751"
-                className="hidden md:inline-flex items-center gap-2 bg-cyan-400 hover:bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-md"
+                className="hidden md:inline-flex items-center gap-2 bg-cyan-400  text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-md"
               >
                 <Phone size={18} />
-                Request Quote
-              </a>
+                Call Us
+              </div>
 
               {/* Mobile menu button */}
               <button

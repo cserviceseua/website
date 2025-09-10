@@ -63,13 +63,16 @@ export default function FinalCta() {
                 <ArrowRight size={20} />
               </button>
               
-              <a 
+              <div 
                 href="tel:(267)407-1751"
                 className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200"
               >
                 <Phone size={20} />
                 (267) 407-1751
-              </a>
+              </div>
+            </div>
+            <div>
+           <p className="text-center text-white/80 text-sm">Preference Text Message</p>
             </div>
 
             {/* Trust indicators */}
