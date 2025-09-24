@@ -12,12 +12,12 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'C & R Cleaning - Serviços de Limpeza Profissional',
-  description: 'Serviços de limpeza residencial e comercial de alto padrão. Equipe qualificada, produtos de qualidade e satisfação 100% garantida. Solicite seu orçamento hoje!',
-  keywords: 'limpeza profissional, limpeza residencial, limpeza comercial, faxina, serviços de limpeza, limpeza de escritório, serviços de diarista',
+  title: 'C & R Cleaning - Professional Cleaning Services',
+  description: 'High-standard residential and commercial cleaning services. Qualified team, quality products, and 100% satisfaction guaranteed. Request your quote today!',
+  keywords: 'professional cleaning, residential cleaning, commercial cleaning, deep cleaning, cleaning services, office cleaning, housekeeper services',
   openGraph: {
-    title: 'C & R Cleaning - Serviços de Limpeza Profissional',
-    description: 'Serviços de limpeza residencial e comercial de alto padrão. Equipe qualificada e satisfação 100% garantida.',
+    title: 'C & R Cleaning - Professional Cleaning Services',
+    description: 'High-standard residential and commercial cleaning services. Qualified team and 100% satisfaction guaranteed.',
     siteName: 'C & R Cleaning Services',
     type: 'website',
     images: [
@@ -31,8 +31,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'C & R Cleaning - Serviços de Limpeza Profissional',
-    description: 'Serviços de limpeza residencial e comercial de alto padrão. Equipe qualificada e satisfação 100% garantida.',
+    title: 'C & R Cleaning - Professional Cleaning Services',
+    description: 'High-standard residential and commercial cleaning services. Qualified team and 100% satisfaction guaranteed.',
     images: ['/banner.png'],
   },
   icons: {
@@ -58,11 +58,11 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         
-        {/* Scripts para comportamentos avançados de interação */}
+  {/* Scripts for advanced interaction behaviors */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Script para animações de entrada baseadas em intersecção
+              // Script for entry animations based on intersection
               document.addEventListener('DOMContentLoaded', () => {
                 if ('IntersectionObserver' in window) {
                   const appearOptions = {
