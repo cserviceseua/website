@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Metadata } from "next";
+
 
 // Carrega a fonte Inter com todos os pesos necessários
 const inter = Inter({ 
@@ -10,6 +10,12 @@ const inter = Inter({
   display: 'swap',
   weight: ['300', '400', '500', '600', '700', '800'],
 });
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  themeColor: '#0F4C81',
+};
 
 export const metadata = {
   title: 'C & R Cleaning - Professional Cleaning Services',
@@ -36,12 +42,10 @@ export const metadata = {
     images: ['/banner.png'],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon-32x32.png',
     shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
-  viewport: 'width=device-width, initial-scale=1.0',
-  themeColor: '#0F4C81',
   robots: {
     index: true,
     follow: true,
