@@ -44,7 +44,7 @@ export default function Footer() {
               with 100% satisfaction guaranteed.
             </p>
             <div className="flex gap-4">
-              <a 
+              {/* <a 
                 href="https://facebook.com/crcleaningservices" 
                 className="w-10 h-10 bg-white/10 hover:bg-cyan-400 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30"
                 aria-label="Facebook"
@@ -61,7 +61,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <Instagram size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -161,7 +161,7 @@ export default function Footer() {
                 <span className='whitespace-preline'>(267) 407-1751 {"\n"}(preference text message)</span>
               </div>
               <a 
-                href="mailto:crcleaningservices@gmail.com" 
+                href="mailto:crcleaningservices2125@gmail.com" 
                 className="flex items-center gap-3 text-white/80 hover:text-cyan-400 transition-colors duration-200 group"
               >
                 <div className="w-10 h-10 bg-white/10 rounded-full flex flex-shrink-0 items-center justify-center group-hover:bg-cyan-400/20 transition-all duration-200">
