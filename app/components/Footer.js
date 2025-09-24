@@ -167,7 +167,7 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-white/10 rounded-full flex flex-shrink-0 items-center justify-center group-hover:bg-cyan-400/20 transition-all duration-200">
                   <Mail size={18} className="group-hover:text-cyan-400" />
                 </div>
-                <span>crcleaningservices@gmail.com</span>
+                <span>crcleaningservices2125@gmail.com</span>
               </a>
              
             </div>
