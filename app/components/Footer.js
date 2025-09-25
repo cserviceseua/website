@@ -44,8 +44,8 @@ export default function Footer() {
               with 100% satisfaction guaranteed.
             </p>
             <div className="flex gap-4">
-              {/* <a 
-                href="https://facebook.com/crcleaningservices" 
+              <a 
+                href="https://www.facebook.com/profile.php?id=61579741629635" 
                 className="w-10 h-10 bg-white/10 hover:bg-cyan-400 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30"
                 aria-label="Facebook"
                 target="_blank"
@@ -54,14 +54,14 @@ export default function Footer() {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://instagram.com/crcleanigservices2125" 
+                href="https://www.instagram.com/crcleaningservices2125?igsh=NWJkaXY5dTVhcGZm&utm_source=qr" 
                 className="w-10 h-10 bg-white/10 hover:bg-cyan-400 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram size={20} />
-              </a> */}
+              </a>
             </div>
           </div>
 
@@ -171,7 +171,7 @@ export default function Footer() {
               </a>
              
             </div>
-
+            <Image src="/logo.png" width={160} height={50} alt="C & R Cleaning" className='mt-6'/>
           
           </div>
         </div>
